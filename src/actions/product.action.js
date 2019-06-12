@@ -129,6 +129,7 @@ export const getCommentByIDBook = (id) => async (dispatch, getState) => {
         console.log(JSON.stringify(err.response))
         return
     }
+    console.log('data',res.data.data);
     dispatch(setTotalPage(res.data.totalPage))
     dispatch(setComment(res.data.data))
 }
